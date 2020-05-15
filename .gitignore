@@ -1,2 +1,4 @@
 /vendor/
 /.idea/
+/phpunit.phar
+/tests/logs/

@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendi\CptFromYaml;
+namespace Vendi\YamlLoader;
 
 abstract class YamlLoaderBaseWithObjectCache extends YamlLoaderBase
 {
@@ -14,7 +14,7 @@ abstract class YamlLoaderBaseWithObjectCache extends YamlLoaderBase
 
     final public function save_to_cache(array $config): bool
     {
-        wp_cache_set($this->cacheKey, $config);
+        return wp_cache_set($this->cacheKey, $config);
     }
 
     final public function remove_from_cache(): bool

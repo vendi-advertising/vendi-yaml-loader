@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendi\CptFromYaml;
+namespace Vendi\YamlLoader;
 
 interface YamlLoaderInterface
 {
