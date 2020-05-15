@@ -1,5 +1,6 @@
 {
   "name": "vendi-advertising/vendi-yaml-loader",
+  "license": "MIT",
   "authors": [
     {
       "name": "Chris Haas",
