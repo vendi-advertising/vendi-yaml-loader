@@ -171,7 +171,7 @@ TAG
     {
         $key = $this->get_simple_mock()->get_env_key();
 
-        $file = vfsStream::url(Path::join($this->get_root_dir_name_no_trailing_slash(), 'cpts.yaml'));
+        $file = vfsStream::url(Path::join($this->get_root_dir_name_no_trailing_slash(), 'entry.yaml'));
         \putenv("${key}=${file}");
         \touch($file);
         $config = $this->get_simple_mock()->get_config();
