@@ -1,6 +1,7 @@
 {
   "name": "vendi-advertising/vendi-yaml-loader",
   "license": "MIT",
+  "description": "Generic YAML loader used by several Vendi libraries",
   "authors": [
     {
       "name": "Chris Haas",
