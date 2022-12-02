@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Vendi\YamlLoader;
 
 use Symfony\Component\Yaml\Yaml;
-use Webmozart\PathUtil\Path;
+use Symfony\Component\Filesystem\Path;
 
 abstract class YamlLoaderBase implements YamlLoaderInterface
 {
