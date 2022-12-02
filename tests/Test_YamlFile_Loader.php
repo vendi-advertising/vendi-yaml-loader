@@ -11,7 +11,7 @@ namespace Vendi\YamlLoader\Tests;
 use org\bovigo\vfs\vfsStream;
 use Vendi\YamlLoader\YamlLoaderBase;
 use Vendi\YamlLoader\YamlLoaderBaseWithObjectCache;
-use Webmozart\PathUtil\Path;
+use Symfony\Component\Filesystem\Path;
 
 class Test_YamlFile_Loader extends YamlFileLoaderTestCase
 {

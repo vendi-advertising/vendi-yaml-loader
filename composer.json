@@ -1,6 +1,7 @@
 {
   "name": "vendi-advertising/vendi-yaml-loader",
   "license": "MIT",
+  "description": "Generic YAML loader used by several Vendi libraries",
   "authors": [
     {
       "name": "Chris Haas",
@@ -13,18 +14,13 @@
     }
   },
   "require": {
-    "php": "^7.3|^8.0",
-    "symfony/yaml": "^4|^5.0.8|^6",
-    "webmozart/path-util": "^2.3"
+    "php": "^8.0|^8.1",
+    "symfony/yaml": "^5.0.8|^6",
+    "symfony/filesystem": "^6.2"
   },
   "require-dev": {
-    "automattic/vipwpcs": "^2.0",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
     "roave/security-advisories": "dev-master",
-    "squizlabs/php_codesniffer": "^3.5.5",
     "mikey179/vfsstream": "^1.6",
-    "symfony/var-dumper": "^4|^5.0.8|^6",
-    "wp-coding-standards/wpcs": "^2.3.0",
-    "phpunit/phpunit": "7|8|9"
+    "phpunit/phpunit": "^8|^9"
   }
 }
