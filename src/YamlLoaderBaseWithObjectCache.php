@@ -4,10 +4,7 @@ namespace Vendi\YamlLoader;
 
 abstract class YamlLoaderBaseWithObjectCache extends YamlLoaderBase
 {
-    /**
-     * @return mixed
-     */
-    final public function load_from_cache()
+    final public function load_from_cache(): mixed
     {
         return wp_cache_get($this->cacheKey);
     }

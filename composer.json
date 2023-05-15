@@ -13,13 +13,18 @@
       "Vendi\\YamlLoader\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Vendi\\YamlLoader\\Tests\\": "tests/"
+    }
+  },
   "require": {
-    "php": "^8.0|^8.1",
+    "php": "^8.0|^8.1|^8.2",
     "symfony/yaml": "^5.0.8|^6",
     "symfony/filesystem": "^6.2"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-master",
+    "roave/security-advisories": "dev-latest",
     "mikey179/vfsstream": "^1.6",
     "phpunit/phpunit": "^8|^9"
   }

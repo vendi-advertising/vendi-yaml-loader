@@ -4,48 +4,23 @@ declare(strict_types=1);
 
 namespace Vendi\YamlLoader;
 
-use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\Filesystem\Path;
+use Symfony\Component\Yaml\Yaml;
 
 abstract class YamlLoaderBase implements YamlLoaderInterface
 {
-    /**
-     * @var string
-     */
-    protected $envVariableForFile;
+    protected string $envVariableForFile;
 
-    /**
-     * @var string
-     */
-    protected $defaultFileName;
+    protected string $defaultFileName;
 
-    /**
-     * @var string
-     */
-    protected $cacheKey;
+    protected string $cacheKey;
 
-    /**
-     * @param array $config
-     *
-     * @return bool
-     */
     abstract public function is_config_valid(array $config): bool;
 
-    /**
-     * @return mixed
-     */
-    abstract public function load_from_cache();
+    abstract public function load_from_cache(): mixed;
 
-    /**
-     * @param array $config
-     *
-     * @return bool
-     */
     abstract public function save_to_cache(array $config): bool;
 
-    /**
-     * @return bool
-     */
     abstract public function remove_from_cache(): bool;
 
     public function __construct(string $envVariableForFile, string $defaultFileName, string $cacheKey)
@@ -66,6 +41,7 @@ abstract class YamlLoaderBase implements YamlLoaderInterface
         if (false === $ret) {
             return '';
         }
+
         return $ret;
     }
 
@@ -107,6 +83,7 @@ abstract class YamlLoaderBase implements YamlLoaderInterface
         } catch (\Exception $ex) {
             // On failure, purge the cache (just in case) and return the default
             $this->remove_from_cache();
+
             return $this->get_default_config();
         }
 
@@ -117,6 +94,7 @@ abstract class YamlLoaderBase implements YamlLoaderInterface
 
         // Cache it
         $this->save_to_cache($ret);
+
         return $ret;
 
     }

@@ -6,6 +6,7 @@ if (!function_exists('get_template_directory')) {
     function get_template_directory()
     {
         global $current_test_dir;
+
         return $current_test_dir;
     }
 }
@@ -18,6 +19,7 @@ if (!function_exists('wp_cache_get')) {
             // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
             $wp_object_cache = create_object_cache();
         }
+
         return $wp_object_cache->get($key, $group, $force, $found);
     }
 }
@@ -30,6 +32,7 @@ if (!function_exists('wp_cache_set')) {
             // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
             $wp_object_cache = create_object_cache();
         }
+
         return $wp_object_cache->set($key, $data, $group, (int)$expire);
     }
 }
@@ -42,6 +45,7 @@ if (!function_exists('wp_cache_delete')) {
             // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
             $wp_object_cache = create_object_cache();
         }
+
         return $wp_object_cache->delete($key, $group);
     }
 }
@@ -71,6 +75,7 @@ function create_object_cache(): object
 
             $found = false;
             $this->cache_misses++;
+
             return false;
         }
 
@@ -85,6 +90,7 @@ function create_object_cache(): object
             }
 
             $this->cache[$group][$key] = $data;
+
             return true;
         }
 
@@ -99,6 +105,7 @@ function create_object_cache(): object
             }
 
             unset($this->cache[$group][$key]);
+
             return true;
         }
 
