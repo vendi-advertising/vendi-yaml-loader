@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Vendi\YamlLoader;
 
-use Symfony\Component\Filesystem\Path;
 use Symfony\Component\Yaml\Yaml;
+use Vendi\YamlLoader\SymfonyFileSystem\Path;
 
 abstract class YamlLoaderBase implements YamlLoaderInterface
 {

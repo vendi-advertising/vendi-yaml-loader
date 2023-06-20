@@ -9,9 +9,9 @@
 namespace Vendi\YamlLoader\Tests;
 
 use org\bovigo\vfs\vfsStream;
+use Vendi\YamlLoader\SymfonyFileSystem\Path;
 use Vendi\YamlLoader\YamlLoaderBase;
 use Vendi\YamlLoader\YamlLoaderBaseWithObjectCache;
-use Symfony\Component\Filesystem\Path;
 
 class Test_YamlFile_Loader extends YamlFileLoaderTestCase
 {
